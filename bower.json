@@ -1,0 +1,26 @@
+{
+  "name": "thingiview",
+  "main": "thingiview.html",
+  "version": "0.0.0",
+  "authors": [
+    "Øivind Kolloen <okolloen@hig.no>"
+  ],
+  "description": "Polymer element wrapper for thingiview.js",
+  "keywords": [
+    "thingiview",
+    "wrapper",
+    "stl",
+    "3d-printer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2"
+  }
+}
