@@ -1,8 +1,8 @@
-Thingiview = function(containerId) {
+Thingiview = function(container) {		// Changed from containerId to make it work with shadowDOM
   scope = this;
   
-  this.containerId  = containerId;
-  var container     = document.getElementById(containerId);
+//  this.containerId  = containerId;	// No more need for containerId, see above
+  this.container     = container;		// Now only store the reference to the DOM object
   
   // var stats    = null;
   var camera   = null;

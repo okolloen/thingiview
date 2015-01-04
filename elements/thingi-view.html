@@ -1,13 +1,31 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="thingi-view">
+<polymer-element name="thingi-view" attributes="filename">
   <template>
-    <span>Hello from <b>my-element</b>. This is my Shadow DOM.</span>
+	<style type="text/css">
+		div {
+			min-width: 400px;
+			min-height: 300px;
+		}
+	</style>
+	<input type="text" value="{{filename}}">
+	<div id="viewer"></div>
   </template>
   <script>
     Polymer({
+	  thingiview: null,
+	  filename: null,
       ready: function() {
-      }
+		thingiurlbase = "../thingiview.js";
+		thingiview = new Thingiview(this.$.viewer);
+		thingiview.setObjectColor('#C0D8F0');
+		thingiview.initScene();
+      },
+	  filenameChanged: function() {
+        if (this.filename) {
+		  thingiview.loadSTL(this.filename);
+		}
+	  }
     });
   </script>
 </polymer-element>
